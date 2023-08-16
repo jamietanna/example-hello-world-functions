@@ -8,9 +8,8 @@
 
 exports.handler = async event => {
     const subject = event.queryStringParameters.name || 'World'
-    console.log(JSON.stringify(process.env))
     return {
         statusCode: 200,
-        body: `Hello ${subject}!`,
+        body: JSON.stringify(process.env),
     }
 }
